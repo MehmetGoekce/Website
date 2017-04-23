@@ -36,6 +36,8 @@ class ConfigProvider
             'invokables' => [
             ],
             'factories'  => [
+                Action\HomePageAction::class => Action\HomePageActionFactory::class,
+                Action\RedirectAction::class => Action\RedirectActionFactory::class,
             ],
         ];
     }
@@ -49,9 +51,9 @@ class ConfigProvider
     {
         return [
             'paths' => [
-                'app'    => [__DIR__ . '/../templates/app'],
-                'error'  => [__DIR__ . '/../templates/error'],
-                'layout' => [__DIR__ . '/../templates/layout'],
+                'website'    => [__DIR__ . '/../templates/website'],
+                'websiteerror'  => [__DIR__ . '/../templates/websiteerror'],
+                'websitelayout' => [__DIR__ . '/../templates/websitelayout'],
             ],
         ];
     }
