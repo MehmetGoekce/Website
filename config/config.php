@@ -11,12 +11,12 @@ $cacheConfig = [
 ];
 
 $aggregator = new ConfigAggregator([
-    \Website\ConfigProvider::class,
+    Website\ConfigProvider::class,
     // Include cache configuration
     new ArrayProvider($cacheConfig),
 
     // Default App module config
-    App\ConfigProvider::class,
+    //App\ConfigProvider::class,
 
     // Load application config in a pre-defined order in such a way that local settings
     // overwrite global settings. (Loaded as first to last):
