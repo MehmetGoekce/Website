@@ -5,6 +5,7 @@ namespace Website\Action;
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 use Website\Action\HomePageAction;
+use Zend\Expressive\Template\TemplateRendererInterface;
 
 class HomePageActionFactory implements FactoryInterface
 {
@@ -16,6 +17,6 @@ class HomePageActionFactory implements FactoryInterface
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        return new HomePageAction($container->get(\Zend\Expressive\Template\TemplateRendererInterface::class));
+        return new HomePageAction($container->get(TemplateRendererInterface::class));
     }
 }
